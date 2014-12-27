@@ -64,7 +64,7 @@
     </RadioGroup>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="179dp"
         android:layout_height="wrap_content"
         android:text="@string/simpan"
         android:id="@+id/buttonBuatSimpan" />

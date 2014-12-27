@@ -23,6 +23,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         menuForm=new MenuForm(this);
         menuForm.getButtonAdd().setOnClickListener(this);
         menuForm.getButtonList().setOnClickListener(this);
+        menuForm.getButtonRandom().setOnClickListener(this);
     }
 
     @Override
@@ -32,6 +33,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             startActivity(intent);
         }else if(v==menuForm.getButtonList()){
             Intent intent=new Intent(this, DaftarActivity.class);
+            startActivity(intent);
+        }else if(v==menuForm.getButtonRandom()){
+            Intent intent=new Intent(this, RandomersActivity.class);
             startActivity(intent);
         }
     }

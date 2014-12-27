@@ -24,6 +24,14 @@
             android:name=".DaftarActivity"
             android:label="@string/daftar" >
         </activity>
+        <activity
+            android:name=".EditActivity"
+            android:label="@string/edit" >
+        </activity>
+        <activity
+            android:name=".RandomersActivity"
+            android:label="@string/random" >
+        </activity>
     </application>
 
 </manifest>

@@ -3,7 +3,6 @@ package id.prosdev.studentcrud.form;
 import android.app.Activity;
 import android.widget.ListView;
 
-import id.prosdev.studentcrud.R;
 
 /**
  * Created by Administrator on 12/24/2014.
@@ -16,7 +15,7 @@ public class DaftarForm {
     public DaftarForm(Activity activity) {
         this.activity = activity;
 
-        listView=(ListView) activity.findViewById(R.id.listStudent);
+        listView=(ListView) activity.findViewById(android.R.id.list);
     }
 
     public Activity getActivity() {

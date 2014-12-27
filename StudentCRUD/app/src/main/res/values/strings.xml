@@ -14,5 +14,9 @@
     <string name="female">Female</string>
     <string name="simpan">Simpan</string>
     <string name="daftar">Daftar Mahasiswa</string>
+    <string name="update">Update Student</string>
+    <string name="delete">Delete Studenta</string>
+    <string name="edit">Update Student</string>
+    <string name="random">Generate Groups</string>
 
 </resources>

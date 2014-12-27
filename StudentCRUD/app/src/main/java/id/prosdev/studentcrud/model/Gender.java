@@ -5,8 +5,8 @@ package id.prosdev.studentcrud.model;
  */
 public enum Gender {
 
-    MALE("Male"),
-    FEMALE("Female");
+    MALE("MALE"),
+    FEMALE("FEMALE");
 
     private final String name;
 
