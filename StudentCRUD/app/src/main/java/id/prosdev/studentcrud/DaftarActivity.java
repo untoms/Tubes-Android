@@ -4,10 +4,13 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -42,8 +45,23 @@ public class DaftarActivity extends ListActivity{
         List<Student> list=db.getAllStudent();
 
         if (!list.isEmpty()){
-            ArrayAdapter<Student> adapter=new ArrayAdapter<>(this,
-                    android.R.layout.simple_list_item_1,list);
+            ArrayAdapter<Student> adapter=new ArrayAdapter<Student>(this,
+                    android.R.layout.simple_list_item_1,list){
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    View view = super.getView(position, convertView, parent);
+                    TextView text = (TextView) view.findViewById(android.R.id.text1);
+                    text.setTextColor(Color.BLACK);
+                    if(position%2 == 0){
+//                        text.setBackgroundColor(Color.argb(25,255,255,255));
+                        text.setBackgroundColor(Color.LTGRAY);
+                    }else{
+//                        text.setBackgroundColor(Color.argb(25,255,255,255));
+                        text.setBackgroundColor(Color.DKGRAY);
+                    }
+                    return view;
+                }
+            };
 
             daftarForm.getListView().setAdapter(adapter);
         }

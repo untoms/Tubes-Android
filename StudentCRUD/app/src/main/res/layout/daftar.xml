@@ -8,7 +8,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/daftar"
-        android:id="@+id/textView5" />
+        android:id="@+id/textView5"
+        android:textColor="@android:color/black" />
 
     <ListView
         android:layout_width="match_parent"

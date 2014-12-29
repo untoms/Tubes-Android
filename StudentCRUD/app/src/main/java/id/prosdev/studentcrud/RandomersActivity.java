@@ -1,9 +1,12 @@
 package id.prosdev.studentcrud;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +40,23 @@ public class RandomersActivity extends Activity implements View.OnClickListener{
         Integer groups=Integer.valueOf(randomersForm.getNumbers().getText().toString());
         if(groups > 0){
             List<Student> list=generate();
-            ArrayAdapter<Student> adapter=new ArrayAdapter<>(this,
-                    android.R.layout.simple_list_item_1, list);
+            ArrayAdapter<Student> adapter=new ArrayAdapter<Student>(this,
+                    android.R.layout.simple_list_item_1, list){
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    View view = super.getView(position, convertView, parent);
+                    TextView text = (TextView) view.findViewById(android.R.id.text1);
+                    text.setTextColor(Color.BLACK);
+                    if(position%2 == 0){
+//                        text.setBackgroundColor(Color.argb(25,255,255,255));
+                        text.setBackgroundColor(Color.LTGRAY);
+                    }else{
+//                        text.setBackgroundColor(Color.argb(25,255,255,255));
+                        text.setBackgroundColor(Color.DKGRAY);
+                    }
+                    return view;
+                }
+            };
             randomersForm.getListView().setAdapter(adapter);
         }
 

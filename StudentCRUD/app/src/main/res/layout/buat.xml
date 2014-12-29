@@ -13,19 +13,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="@android:color/black"
         android:text="@string/nim"
         android:id="@+id/textView2" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextBuatNim" />
+        android:id="@+id/editTextBuatNim"
+        android:inputType="text" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="@android:color/black"
         android:text="@string/nama"
         android:id="@+id/textView3" />
 
@@ -33,14 +34,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
         android:id="@+id/editTextBuatNama" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="@android:color/black"
         android:text="@string/gender"
         android:id="@+id/textView4" />
 
